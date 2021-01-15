@@ -101,10 +101,18 @@ p {
 }
 
 .nav-links ul li {
-color: #000;
 display: inline-block;
 margin: 0 0 0 .5em;
 }
+
+.nav-links ul li a {
+    text-decoration: none;;
+}
+
+ul li a {
+    color: #000;
+}
+
 
 ul li {
     font-family: 'Lato';
@@ -112,6 +120,8 @@ ul li {
     font-weight: 400;
     line-height: 1.625em;
 }
+
+
 
 /* ===========================
       END NAVIGATION DESKTOP 
@@ -223,6 +233,8 @@ section > div{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 3em 0 0 0;
+
 }
 
 .layout-3col>.col {
@@ -254,13 +266,65 @@ h4 {
     color: #fff;
 }
 
-section#coming-soon{
-    background-color: #343434;
+section#coming-soon {
+    background: url(images/background-spring-desktop.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
 }
-
 /* =============================
       END COMING SOON DESKTOP
   ============================== */
+
+/* ===========================
+       FOOTER DESKTOP
+  ============================ */
+
+.footer {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 3em;
+}
+
+  footer .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+
+   footer img {
+        width: 200px;
+  }
+
+footer h3 {
+    margin: 0
+}
+
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer ul li {
+        display: inline-block;
+  }
+  footer ul li:nth-child(2n) {
+      padding: 0 1em;
+  }
+
+  footer ul li a {
+    color: #000
+  }
+
+   .right-side-footer {
+       align-self: flex-start;
+   }
+
+/* ===========================
+       END FOOTER DESKTOP
+  ============================ */
 
 
 
@@ -277,6 +341,11 @@ h1 {
     section {
         padding: 2.5em 0;
     }
+
+    section#hero {
+        padding-bottom: 0;
+    }
+
     .hero-container{
         flex-direction: column;
     }
@@ -329,6 +398,11 @@ section > div {
     padding: 2em;
 }
 
+/* ===========================
+       FOOTER TABLET
+  ============================ */
+
+
 }
 
 
@@ -349,6 +423,9 @@ section > div {
         margin: 0 auto;
         padding: 0 2em;
     }
+    section#hero {
+        padding-bottom: 0;
+    }
     main #hero::after {
         content: '';
         background: url(images/index/header-background-mobile.png) center no-repeat;
@@ -360,7 +437,7 @@ section > div {
         bottom: 0;
         right: 0;
         opacity: 1;
-        transform: translateY(14%);
+        transform: translateY(0%);
         position: absolute;
         z-index: -2;
     }
@@ -404,6 +481,37 @@ section > div {
     .tile {
         padding: 2em 2.2em;
      }
+
+     section#coming-soon {
+        background: url(images/background-spring-mobile.jpg);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+    }
+
+
+/* ===========================
+       FOOTER MOBILE
+  ============================ */
+
+
+  footer .footer-container {
+    flex-direction: column;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul li {
+    display: block;
+}
+footer ul li:nth-child(2n) {
+    padding: 0;
+}
+
+
 }
 
 /* =============================
