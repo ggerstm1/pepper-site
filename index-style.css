@@ -74,16 +74,43 @@ p {
         NAVIGATION DESKTOP
    =========================== */
 
-.nav-container {
-    display: flex;
-    max-width: var(--container-width);
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5em 2em;
-    margin: 0 auto;
+nav{
     background-color: #fff;
+    padding: 1em;
+}
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 10px;
 }
 
+.logo {
+    flex: 1;
+    list-style-type: none;
+}
+.item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Lato', Arial, sans-serif;
+}
+.fa-bars:before {
+    color: #000;
+}
+
+.toggle {
+    display: none;
+}
 .nav-logo a{
     background: url('images/Pepper-logo.png');
     background-repeat: no-repeat;
@@ -96,30 +123,7 @@ p {
     text-indent: -9999px;
 }
 
-.nav-links ul {
-    margin: 0;
-}
 
-.nav-links ul li {
-display: inline-block;
-margin: 0 0 0 .5em;
-}
-
-.nav-links ul li a {
-    text-decoration: none;;
-}
-
-ul li a {
-    color: #000;
-}
-
-
-ul li {
-    font-family: 'Lato';
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.625em;
-}
 
 
 
@@ -127,6 +131,42 @@ ul li {
       END NAVIGATION DESKTOP 
    =========================== */
 
+   .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+}
+
+.logo {
+    order: 0;
+}
+
+.item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+}
+
+.button {
+    order: 2;
+}
+
+.submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #111;
+}
+
+.toggle {
+    display: none;
+}
+
+.submenu-active {
+    border-radius: 0;
+}
 
 /* =============================
         HERO STYLES DESKTOP
@@ -249,6 +289,11 @@ section > div{
    margin-bottom: 1.25em;
    padding: 2.5em 1.5em 6em;
 }
+
+#audience img {
+    width:53px;
+    height: 53px;
+}
 /* ======================================================
         END EVERY CHEF DESERVES AN AUDIENCE DESKTOP
   ======================================================= */
@@ -267,11 +312,23 @@ h4 {
 }
 
 section#coming-soon {
-    background: url(images/background-spring-desktop.jpg);
-    background-size: auto;
+    background: #343434;
+    position: relative;
+    overflow: hidden;
+}
+
+#coming-soon::after{
+    content: '';
+    background-image: url('images/index/pepper-background.png');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
+    position: absolute;
+    height: 430px;
+    width: 430px;
+    transform: translateY(-90px);
+    right:0;
+    top: 0;
 }
 /* =============================
       END COMING SOON DESKTOP
@@ -291,6 +348,7 @@ section#coming-soon {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      padding: 2em 0 0 0;
   }
 
    footer img {
@@ -298,11 +356,10 @@ section#coming-soon {
   }
 
 footer h3 {
-    margin: 0
+    margin: 0 0 1em 0;
 }
 
   footer ul {
-    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -315,11 +372,28 @@ footer h3 {
   }
 
   footer ul li a {
-    color: #000
+    color: #000;
+    text-decoration: none;
+    font-family: 'Lato', 'Arial', sans-serif;
   }
 
    .right-side-footer {
        align-self: flex-start;
+   }
+
+   #copyright {
+       padding: 0 3em 2em;
+       max-width: var(--container-width);
+       margin: 0 auto;
+   }
+
+   .social-icon-container{
+       display: flex;
+   }
+   .social-icon-container i {
+       color: #F7736B;
+       padding: 0 1em 0 0;
+       font-size: 20px;
    }
 
 /* ===========================
@@ -343,7 +417,7 @@ h1 {
     }
 
     section#hero {
-        padding-bottom: 0;
+        padding: 0;
     }
 
     .hero-container{
@@ -398,9 +472,11 @@ section > div {
     padding: 2em;
 }
 
+
 /* ===========================
        FOOTER TABLET
   ============================ */
+
 
 
 }
@@ -418,13 +494,66 @@ section > div {
   ============================== */
 
 @media (max-width: 550px) {
+
+
+/* ===========================
+    NAVIGATION TABLET/MOBILE
+  ============================ */
+
+  nav {
+      padding: 1em 2em;
+  }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    .item {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        display: none;
+        padding: 2em 0 0 0;
+    }
+    .active .item {
+        display: block;
+    }
+    .toggle {
+        order: 1;
+        display: block;
+    }
+
+    .menu li a {
+        display: block;
+    }
+    ul.menu.active li:nth-child(2) {
+        padding: 2.5em 0 0 0;
+    }
+
+    .hero-container {
+        padding: 1em 2em 2.5em;
+    }
+
+    .fa-times:before {
+        color: #000;
+    }
+
+
+/* ===========================
+   END NAVIGATION TABLET/MOBILE
+  ============================ */
+
+
     section > div {
         max-width: var(--container-width);
         margin: 0 auto;
         padding: 0 2em;
     }
     section#hero {
-        padding-bottom: 0;
+        padding: 0;
     }
     main #hero::after {
         content: '';
@@ -482,13 +611,10 @@ section > div {
         padding: 2em 2.2em;
      }
 
-     section#coming-soon {
-        background: url(images/background-spring-mobile.jpg);
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-    }
+     #coming-soon::after {
+         right: -170px;
+     }
+
 
 
 /* ===========================
@@ -506,14 +632,27 @@ footer p {
 
 footer ul li {
     display: block;
+    padding: 0 0 1.5em;
 }
 footer ul li:nth-child(2n) {
-    padding: 0;
+    padding: 0 0 1.5em;
 }
-
+.right-side-footer h3 {
+    margin: 1em 0 1.5em;
+}
 
 }
 
 /* =============================
             END MOBILE
   ============================== */
+
+
+  @media (max-width: 360px) {
+    section > div {
+        padding: 0 1em;
+    }
+    .tile {
+        padding: 2em 1em;
+    }
+  }
