@@ -76,6 +76,86 @@
     padding: 1em 0;
 }
 
+section > div {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 3em;
+}
+
+#social-responsible p,
+#team p {
+    max-width: 40em;
+    
+}
+
+#team {
+    background: #fafafa;
+}
+
+
+/*team pepper*/
+
+
+.col-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: 3.5em 0 0 0;
+}
+.col-wrap-2{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3.5em 0 0 0;
+}
+
+.col {
+    max-width: 32%;
+    min-width: 12em;
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+}
+
+.col img {
+    max-width: 128px;
+    height: 128px; 
+    align-self: center;
+    border: 1px solid white;
+    border-radius: 100px;
+}
+
+.tile {
+    padding: 25px 40px;
+    background: #F7736B;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(108, 158, 215, .15);
+    position: relative;
+}
+
+.tile::after{
+    content: '';
+    position: absolute;
+    background-image: url('about-images/team-background-pepper.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 272px;
+    height: 300px;
+    transform: translateX(-40px) translateY(-25px);
+}
+.col h3 {
+    margin: 1em 0 0 0;
+}
+
+.col p {
+    margin: .5em 0 0 0;
+}
+
+.col p,
+.col h3 {
+    align-self: center;
+    color: #fff;
+}
+
+
 /* ===========================================
                     TABLET
   ============================================ */
@@ -90,14 +170,35 @@
         width: 100%;
     }
     section > div {
-        padding: 0 2em;
+        padding: 0 3em;
     }
+
+.right-side-images {
+    width: 68%;
+}
+
   }
 
   /* ===========================================
                 END  TABLET
   ============================================ */
+  @media (max-width: 890px) and (min-width:551px) {
 
+    .col-wrap,
+    .col-wrap-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-wrap-2 {
+        margin: 0;
+    }
+
+    .tile {
+        margin-bottom: 2em;
+    }
+
+  }
 
 
 
@@ -116,5 +217,27 @@
     }
     section > div {
         padding: 0 2em;
+    }
+    .right-side-images {
+        width: 100%;
+    }
+    .col-wrap,
+    .col-wrap-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-wrap-2 {
+        margin: 0;
+    }
+
+    .tile {
+        margin-bottom: 2em;
+    }
+
+
+    #hero-about h1 {
+        text-align: center;
+        margin: 4.5em auto;
     }
   }

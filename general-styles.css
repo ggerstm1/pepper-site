@@ -43,7 +43,7 @@ h2 {
     line-height: 1.1em;
     font-family: 'Roboto', Arial, sans-serif;
     color: #000;
-
+    margin-top: 0;
 }
 
 h3 {
@@ -262,13 +262,28 @@ footer h3 {
               MOBILE
   ============================== */
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
 
 
     h1 {
         max-width: 100%;
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.8em;
     }
 
+    h3 {
+        font-size: 1.25em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+    p{
+        font-size: 1em;
+    }
 
     /* ===========================
         NAVIGATION TABLET/MOBILE
