@@ -1,0 +1,69 @@
+:root {
+    --container-width: 1128px;
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --container-width: 90vw;
+    }
+}
+
+#our-story {
+    background-image: url('about-images/hero-image-about.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 334px;
+}
+
+#our-story h1 {
+    max-width: var(--container-width);
+    margin: 3.45em auto;
+    color: #fff;
+}
+
+section > div {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 3em;
+}
+
+#story-intro img {
+    max-width: 100%;
+    width: 100%;
+}
+.mobile-image {
+    display: none;
+}
+
+.desktop-image {
+    padding: 2em 0 0 0;
+
+}
+
+/* =============================
+              MOBILE
+  ============================== */
+
+
+  @media (max-width: 550px) {
+
+    #our-story h1 {
+        max-width: var(--container-width);
+        margin: 4.5em auto;
+    }
+
+    section > div {
+        padding: 0 2em;
+    }
+
+    .desktop-image{
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
+        padding: 2em 0 0 0;
+    }
+
+}
