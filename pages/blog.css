@@ -91,6 +91,41 @@ div#iframe-instagram {
     margin: 0 auto;
 }
 
+.row-1,
+.row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+.row-2 {
+    margin: 3em 0 0 0;
+}
+
+#blog-posts img{
+    max-width: 470px;
+    width: 100%;
+}
+
+#blog-posts h2,
+#blog-posts h3 {
+    text-align: center; 
+    margin: 0;
+}
+
+#blog-posts h3 a {
+    color: #F7736B;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+#blog-posts h2,
+#blog-posts h3 {
+    padding: .5em 0 0 0;
+}
+
+
+
 
 /* =============================
               MOBILE
@@ -111,6 +146,19 @@ div#iframe-instagram {
     #instagram iframe {
         min-height: 550px;
         height: auto !important;
+    }
+
+    .blog-info {
+        padding: 2.5em 0 0 0;;
+    }
+
+    .blog-info-row1:first-of-type {
+        padding: 0;
+    }
+
+    .row-1,
+    .row-2 {
+        margin: 0;
     }
 
 }
