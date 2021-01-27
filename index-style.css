@@ -41,7 +41,7 @@ main #hero::after {
     margin:0 auto;
     align-items: center;
     justify-content: space-between;
-    padding: 2.5em 2em
+    padding: 2.5em 2em 0;
 }
 
 #screen-images img {
@@ -55,13 +55,15 @@ main #hero::after {
     border: 1px solid #000;
     color: #fff;
     box-shadow: none;
-    font-family: 'AccordWb','Open Sans', Arial, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     border-radius: 10px;
     margin: 0;
-    width: 40%;
-    padding: .5em 1em;}
+    width: 80%;
+    padding: .5em 1em;
+    cursor: pointer;
+}
 
 /* ===============================
             HERO STYLES FORM
@@ -90,6 +92,8 @@ main #hero::after {
         width: 40%;
         margin: 0 0 0 .5em;
     }
+    
+
 
 
    /* ===============================
@@ -163,6 +167,10 @@ h4 {
     color: #fff;
 }
 
+#coming-soon h4 {
+    margin-bottom: 0;
+}
+
 section#coming-soon {
     background: #343434;
     position: relative;
@@ -182,6 +190,30 @@ section#coming-soon {
     right:0;
     top: 0;
 }
+
+#coming-soon button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    box-shadow: none;
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 10px;
+    margin: 0;
+    width: 40%;
+    padding: .5em 1em;
+    cursor: pointer;
+}
+
+#coming-soon-button a{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
 /* =============================
       END COMING SOON DESKTOP
   ============================== */
@@ -193,6 +225,13 @@ section#coming-soon {
   ============================================ */
 @media screen and (max-width: 977px) and (min-width: 551px) {
 
+    .hero-container {
+        padding: 2.5em 2em 2.5em;
+    }
+
+    #hero-text {
+        align-self: flex-start;
+    }
 
     section#hero {
         padding: 0;
@@ -201,6 +240,8 @@ section#coming-soon {
     .hero-container{
         flex-direction: column;
     }
+
+
 
     
     main #hero::after {
@@ -220,11 +261,17 @@ section#coming-soon {
 }
 
 #screen-images img {
-    margin: 4em 0 0 0;
+    margin: 4em 0 2em 0;
     max-width: 60vw;
 }
 
+.email-field-group input {
+    width: 88%;
+}
 
+#submit {
+    width: 55%;
+}
 
 /*every chef deserves an audience*/
 
@@ -251,6 +298,7 @@ section > div {
 }
 
 
+
 /* ===========================
        FOOTER TABLET
   ============================ */
@@ -273,7 +321,14 @@ section > div {
 
 @media (max-width: 570px) {
 
+    div#coming-soon-button {
+        width: 100%;
+    }
 
+    #coming-soon button:focus {
+        outline: none !important;
+        border:1px solid #F7736B;
+    }
 
     section > div {
         max-width: var(--container-width);
@@ -301,10 +356,11 @@ section > div {
     
     .hero-container{
         flex-direction: column;
+        padding: 1.5em 2em 0;
     }
 
     #screen-images img {
-        margin: 3em 0 0 0;
+        margin: 2em 0;
         max-width: 80vw;
     }
 
@@ -327,6 +383,10 @@ section > div {
      #coming-soon::after {
          right: -170px;
      }
+
+     #coming-soon h4 {
+         margin-bottom: 0;
+     }
      form {
          flex-direction: column;
      }
@@ -336,7 +396,9 @@ section > div {
          margin: 0 0 1em 0;
      }
 
-     #hero button,
+     #hero button {
+         width: 100%;
+     }
      .email-field-group input {
          width: calc(100% - 2em);
      }

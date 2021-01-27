@@ -61,6 +61,11 @@
     position: relative;
 }
 
+.intro-container ul li:last-of-type {
+    padding: 1em 0 0 1em;
+}
+
+
 .intro-container ul {
     padding: 0 0 0 1em;
     list-style: none;
@@ -86,7 +91,10 @@ section > div {
 #social-responsible p,
 #team p {
     max-width: 40em;
-    
+}
+
+#social-responsible p {
+    margin-bottom: 0;
 }
 
 #team {
@@ -154,7 +162,14 @@ section > div {
 .col h3 {
     align-self: center;
     color: #fff;
+    text-align: center;
 }
+
+div#spencer {
+    padding: 25px 40px;
+}
+
+
 
 
 /* ===========================================
@@ -176,6 +191,9 @@ section > div {
 
 .right-side-images {
     width: 68%;
+}
+div#spencer {
+    padding: 25px;
 }
 
   }
@@ -199,6 +217,14 @@ section > div {
         margin-bottom: 2em;
     }
 
+    #last-card {
+        margin-bottom: 0;
+    }
+    div#spencer {
+        padding: 25px 40px;
+    }
+
+
   }
 
 
@@ -215,6 +241,9 @@ section > div {
     }
     .left-side-info {
         width: 100%;
+    }
+    #last-card {
+        margin-bottom: 0;
     }
     section > div {
         padding: 0 2em;
@@ -240,5 +269,8 @@ section > div {
     #hero-about h1 {
         text-align: center;
         margin: 4.5em auto;
+    }
+    div#spencer {
+        padding: 25px 40px;
     }
   }
