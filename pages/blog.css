@@ -81,6 +81,10 @@ section#write {
     width: 100% !important;
 }
 
+#instagram {
+    background: #fafafa
+}
+
 #instagram h2 {
     text-align: center;
     margin-bottom: 1.5em;
