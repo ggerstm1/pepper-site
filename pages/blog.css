@@ -156,7 +156,7 @@ div#iframe-instagram {
     }
 
     #instagram iframe {
-        min-height: 550px;
+        min-height: 390px;
         height: auto !important;
     }
 
