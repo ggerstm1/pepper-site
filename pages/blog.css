@@ -124,9 +124,21 @@ div#iframe-instagram {
     padding: .5em 0 0 0;
 }
 
+ /* ===========================================
+                    TABLET
+  ============================================ */
 
+  @media screen and (max-width: 977px) and (min-width: 551px) {
 
+.blog-info {
+    padding: 2.5em 0 0 0;
+}
 
+.row-2 {
+    margin: 0;
+}
+
+  }
 /* =============================
               MOBILE
   ============================== */
@@ -149,7 +161,7 @@ div#iframe-instagram {
     }
 
     .blog-info {
-        padding: 2.5em 0 0 0;;
+        padding: 2.5em 0 0 0;
     }
 
     .blog-info-row1:first-of-type {
